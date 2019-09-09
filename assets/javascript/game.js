@@ -3,9 +3,7 @@ $(document).ready(function(){
     var gemValues = [];
     var currentScoreNumber = 0;
     var winTotal = 0;
-    var winTotalText = winTotal.toString();
     var loseTotal = 0;
-    var loseTotalText = loseTotal.toString();
 
     // This sets the number we want to hit.
     function getTargetNumber(min, max) {
@@ -14,8 +12,8 @@ $(document).ready(function(){
     targetNumber = getTargetNumber(19, 120);
     $("#random-number").text(targetNumber);
 
-    $("#win-total").text(winTotalText);
-    $("#losses-total").text(loseTotalText);
+    $("#win-total").text(winTotal);
+    $("#losses-total").text(loseTotal);
 
     function getGemValue() {
         for(var i = 0; i < 4; i++) {
@@ -31,15 +29,17 @@ $(document).ready(function(){
             console.log("winTotal: " + winTotal);
             getGemValue();
             targetNumber = getTargetNumber(19, 120);
+            $("#random-number").text(targetNumber);
             currentScoreNumber = 0;
-            $("#win-total").text(winTotalText);
+            $("#win-total").text(winTotal);
         } else if (currentScoreNumber > targetNumber) {
             loseTotal++;
             console.log("loseTotal: " + loseTotal);
             getGemValue();
             targetNumber = getTargetNumber(19, 120);
+            $("#random-number").text(targetNumber);
             currentScoreNumber = 0;
-            $("#losses-total").text(loseTotalText);
+            $("#losses-total").text(loseTotal);
         }
     };
 
