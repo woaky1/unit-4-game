@@ -26,4 +26,22 @@ $(document).ready(function(){
         console.log(currentScoreNumber);
         $("#currentScore").text(currentScoreNumber);
     });
+
+    $("#gem-2").click(function(){
+        currentScoreNumber += gemValues[1];
+        console.log(currentScoreNumber);
+        $("#currentScore").text(currentScoreNumber);
+    });
+
+    $("#gem-3").click(function(){
+        currentScoreNumber += gemValues[2];
+        console.log(currentScoreNumber);
+        $("#currentScore").text(currentScoreNumber);
+    });
+
+    $("#gem-4").click(function(){
+        currentScoreNumber += gemValues[3];
+        console.log(currentScoreNumber);
+        $("#currentScore").text(currentScoreNumber);
+    });
 });
