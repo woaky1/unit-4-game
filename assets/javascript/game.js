@@ -1,10 +1,12 @@
 $(document).ready(function(){
+
     // Here we're declaring a bunch of our variables and giving some of them initial values.
     var targetNumber;
     var gemValues = [];
     var currentScoreNumber = 0;
     var winTotal = 0;
     var lossTotal = 0;
+    var whichGem;
 
     // This sets the number we want to hit.
     function getTargetNumber(min, max) {
@@ -53,32 +55,37 @@ $(document).ready(function(){
         }
     };
     
-    $("#gem-1").click(function(){
-        currentScoreNumber += gemValues[0];
-        // console.log(currentScoreNumber);
-        $("#currentScore").text(currentScoreNumber);
-        checkScore();
+    $(".gem").on("click", function() {
+        whichGem = $(this).val();
+        console.log(whichGem);
     });
 
-    $("#gem-2").click(function(){
-        currentScoreNumber += gemValues[1];
-        // console.log(currentScoreNumber);
-        $("#currentScore").text(currentScoreNumber);
-        checkScore();
-    });
+    // $("#gem-1").click(function(){
+    //     currentScoreNumber += gemValues[0];
+    //     // console.log(currentScoreNumber);
+    //     $("#currentScore").text(currentScoreNumber);
+    //     checkScore();
+    // });
 
-    $("#gem-3").click(function(){
-        currentScoreNumber += gemValues[2];
-        // console.log(currentScoreNumber);
-        $("#currentScore").text(currentScoreNumber);
-        checkScore();
-    });
+    // $("#gem-2").click(function(){
+    //     currentScoreNumber += gemValues[1];
+    //     // console.log(currentScoreNumber);
+    //     $("#currentScore").text(currentScoreNumber);
+    //     checkScore();
+    // });
 
-    $("#gem-4").click(function(){
-        currentScoreNumber += gemValues[3];
-        // console.log(currentScoreNumber);
-        $("#currentScore").text(currentScoreNumber);
-        checkScore();
-    });
+    // $("#gem-3").click(function(){
+    //     currentScoreNumber += gemValues[2];
+    //     // console.log(currentScoreNumber);
+    //     $("#currentScore").text(currentScoreNumber);
+    //     checkScore();
+    // });
+
+    // $("#gem-4").click(function(){
+    //     currentScoreNumber += gemValues[3];
+    //     // console.log(currentScoreNumber);
+    //     $("#currentScore").text(currentScoreNumber);
+    //     checkScore();
+    // });
 
 });
