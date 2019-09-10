@@ -15,12 +15,13 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12 mb-4">
+            <div class="col-md-12 mb-4 text-center">
                 <h1>CrystalsCollector</h1>
             </div>
         </div>
 
         <div class="row mb-3">
+            <div class="col-md-2"></div>
             <div class="col-md-8 bg-info p-3">
                 <p>You will be given a random number at the start of the game.</p>
                 <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
@@ -28,9 +29,10 @@
                 <p>The value of each crystal is hidden from you until you click on it.</p>
                 <p>Each time the game starts, the game will change the value of each crystal.</p>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-md-2"></div>
         </div>
         <div class="row mt-4 mb-3">
+            <div class="col-md-2"></div>
             <div class="col-md-2 bg-danger text-center pt-4">
                 <div>
                     <h2 id="random-number"></h2>
@@ -41,9 +43,10 @@
                 <p class= "mt-1">Wins: <span id="win-total"></span></p>
                 <p>Losses: <span id="losses-total"></span></p>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-md-2"></div>
         </div>
         <div class="row pl-5">
+            <div class="col-md-2"></div>
             <div class="col-md-2 gem" id="gem-1" data-gemIndex="0">
                 <p><span class="fa fa-diamond"></span></p>
             </div>
@@ -56,18 +59,12 @@
             <div class="col-md-2 gem" id="gem-4" data-gemIndex="3">
                 <p><span class="fa fa-diamond"></span></p>
             </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
             <div class="col-md-4"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h3>Your total score is:</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <div>
-                    <h2 class="ml-5" id="currentScore"></h2>
-                </div>
+            <div class="col-md-4">
+                <h2>Your total score is: <span class="" id="currentScore"></span></h2>
             </div>
             <div class="col-md-4"></div>
         </div>
