@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>CrystalsCollector</title>
+    <!-- Here are links to stylesheets to reset the css, get to font awesome for our gem icon, bootstrap, our custom styles, and our snazzy font for the header. -->
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -14,12 +15,14 @@
 </head>
 <body>
     <div class="container">
+        <!-- Below is the main headline -->
         <div class="row">
             <div class="col-md-12 mb-4 text-center">
                 <h1>CrystalsCollector</h1>
             </div>
         </div>
 
+        <!-- This is the main rules box. -->
         <div class="row mb-3">
             <div class="col-md-2"></div>
             <div class="col-md-8 bg-info p-3">
@@ -33,12 +36,14 @@
         </div>
         <div class="row mt-4 mb-3">
             <div class="col-md-2"></div>
+            <!-- Here's where we show the random target number -->
             <div class="col-md-2 bg-danger text-center pt-4">
                 <div>
                     <h2 id="random-number"></h2>
                 </div>
             </div>
             <div class="col-md-4"></div>
+            <!-- This is where we show win and loss totals -->
             <div class="col-md-2 bg-success pt-2 pl-3">
                 <p class= "mt-1">Wins: <span id="win-total"></span></p>
                 <p>Losses: <span id="losses-total"></span></p>
@@ -46,6 +51,7 @@
             <div class="col-md-2"></div>
         </div>
         <div class="row pl-5">
+            <!-- This is where our gems live. -->
             <div class="col-md-2"></div>
             <div class="col-md-2 gem" id="gem-1" data-gemIndex="0">
                 <p><span class="fa fa-diamond"></span></p>
@@ -63,6 +69,7 @@
         </div>
         <div class="row">
             <div class="col-md-4"></div>
+            <!-- This is where we display the user's current score -->
             <div class="col-md-4">
                 <h2>Your total score is: <span class="" id="currentScore"></span></h2>
             </div>
@@ -70,11 +77,12 @@
         </div>
 
     </div>
-
+    <!-- Here we have links to various javalink files we need for bootstrap, jquery, and our game. -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>
+    <!-- These are links to our victory and defeat audio files. -->
     <audio id="victory"><source src="assets/sounds/sms-alert-3-daniel_simon.mp3" type="audio/mpeg"></audio>
     <audio id="defeat"><source src="assets/sounds/Fizzle-SoundBible.com-1439537520.mp3" type="audio/mpeg"></audio>
 

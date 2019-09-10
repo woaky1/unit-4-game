@@ -37,25 +37,37 @@ $(document).ready(function(){
     function checkScore() {
         // The first if statement checks for a win.
         if (currentScoreNumber === targetNumber) {
+            // Here we add a win to our win tally
             winTotal++;
             // console.log("winTotal: " + winTotal);
+            // We reset the values of our gems.
             getGemValue();
+            // We get a new target number and show it.
             targetNumber = getTargetNumber(19, 120);
             $("#random-number").text(targetNumber);
+            // Reset our score.
             currentScoreNumber = 0;
             $("#currentScore").text(currentScoreNumber);
+            // Update our win tally on the page
             $("#win-total").text(winTotal);
+            // Play a victory sound.
             var victorySound = $("#victory")[0];
             victorySound.play();
         } else if (currentScoreNumber > targetNumber) {
+            // Here we add a loss to our loss tally
             lossTotal++;
             // console.log("lossTotal: " + lossTotal);
+            // We reset the values of our gems.
             getGemValue();
+            // We get a new target number and show it.
             targetNumber = getTargetNumber(19, 120);
             $("#random-number").text(targetNumber);
+            // Reset our score.
             currentScoreNumber = 0;
             $("#currentScore").text(currentScoreNumber);
+            // Update our win tally on the page
             $("#losses-total").text(lossTotal);
+            // Play a defeat sound.
             var lostSound = $("#defeat")[0];
             lostSound.play();
         }
@@ -63,9 +75,9 @@ $(document).ready(function(){
     
     $(".gem").on("click", function() {
         whichGem = $(this).attr("data-gemIndex")
-        console.log(whichGem);
+        // console.log(whichGem);
         currentScoreNumber += gemValues[whichGem];
-        console.log(currentScoreNumber);
+        // console.log(currentScoreNumber);
         $("#currentScore").text(currentScoreNumber);
         checkScore();
     });
