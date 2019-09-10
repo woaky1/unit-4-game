@@ -17,3 +17,13 @@
 #gem-4 {
     color: purple;
 }
+
+/* Background pattern from Toptal Subtle Patterns */
+body {
+    background-image: url(../images/diagmonds.png);
+    color: whitesmoke;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+}
