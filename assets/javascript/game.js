@@ -41,6 +41,8 @@ $(document).ready(function(){
             currentScoreNumber = 0;
             $("#currentScore").text(currentScoreNumber);
             $("#win-total").text(winTotal);
+            var victorySound = $("#victory")[0];
+            victorySound.play();
         } else if (currentScoreNumber > targetNumber) {
             lossTotal++;
             // console.log("lossTotal: " + lossTotal);
@@ -50,6 +52,8 @@ $(document).ready(function(){
             currentScoreNumber = 0;
             $("#currentScore").text(currentScoreNumber);
             $("#losses-total").text(lossTotal);
+            var lostSound = $("#defeat")[0];
+            lostSound.play();
         }
     };
     
