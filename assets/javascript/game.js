@@ -19,6 +19,8 @@ $(document).ready(function(){
     $("#win-total").text(winTotal);
     $("#losses-total").text(lossTotal);
 
+    // Show that our initial score before clicking is zero.
+    $("#currentScore").text(currentScoreNumber);
     // This is the function we use to set the value for the gems.
     function getGemValue() {
         for(var i = 0; i < 4; i++) {
