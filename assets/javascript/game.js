@@ -62,36 +62,12 @@ $(document).ready(function(){
     };
     
     $(".gem").on("click", function() {
-        whichGem = $(this).val();
+        whichGem = $(this).attr("data-gemIndex")
         console.log(whichGem);
+        currentScoreNumber += gemValues[whichGem];
+        console.log(currentScoreNumber);
+        $("#currentScore").text(currentScoreNumber);
+        checkScore();
     });
-
-    // $("#gem-1").click(function(){
-    //     currentScoreNumber += gemValues[0];
-    //     // console.log(currentScoreNumber);
-    //     $("#currentScore").text(currentScoreNumber);
-    //     checkScore();
-    // });
-
-    // $("#gem-2").click(function(){
-    //     currentScoreNumber += gemValues[1];
-    //     // console.log(currentScoreNumber);
-    //     $("#currentScore").text(currentScoreNumber);
-    //     checkScore();
-    // });
-
-    // $("#gem-3").click(function(){
-    //     currentScoreNumber += gemValues[2];
-    //     // console.log(currentScoreNumber);
-    //     $("#currentScore").text(currentScoreNumber);
-    //     checkScore();
-    // });
-
-    // $("#gem-4").click(function(){
-    //     currentScoreNumber += gemValues[3];
-    //     // console.log(currentScoreNumber);
-    //     $("#currentScore").text(currentScoreNumber);
-    //     checkScore();
-    // });
 
 });
